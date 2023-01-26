@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env
 # This script is displaying "Best School" 10 times
 a=10
 while [$a -gt 1];
