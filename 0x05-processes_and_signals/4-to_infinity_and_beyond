@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
 # prints the message To infinity and beyond for eternity unless it is killed
+# killed via ctr+c
 
 while true;
 do
 	echo "To infinity and beyond";
 done
+
