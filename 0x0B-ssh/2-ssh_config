@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# Bash script that creates an RSA key pair
+Host *
+    IdentityFile ~/.ssh/school
+    PasswordAuthentication no
