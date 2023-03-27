@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Bash script that creates an RSA key pair
+# Bash script that connects to server without password authentication
 Host *
     IdentityFile ~/.ssh/school
     PasswordAuthentication no
