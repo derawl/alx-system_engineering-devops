@@ -1,6 +1,6 @@
 # Puppet script to create file school
 file{'/tmp/school':
-    ensure => '',
+    ensure => 'file',
     content => 'I love Puppet',
     mode => '0744',
     owner => 'www-data',
