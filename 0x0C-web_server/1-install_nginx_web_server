@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 #creates a new nginx serve and serves an index.html file
 
-sudo app-get update
-sudo app-get install -y ngnix
+app-get update
+app-get install -y ngnix
 
 ufw allow 'Nginx HTTP'
 echo 'Hello World!' > /var/www/html/index.html
 
-sudo service nginx restart
-sudo service nginx status
+service nginx restart
+service nginx status
