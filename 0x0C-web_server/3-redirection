@@ -8,9 +8,19 @@ ufw allow 'Nginx HTTP'
 
 echo 'ALX SCHOOL | sudo tee /var/www/html/redirect.html > /dev/null'
 
-sudo tee /etc/nginx/sites-available/default > /dev/null
+sudo tee /etc/nginx/sites-available/default > /dev/null <<EOT
 
-sed -i '/listen 80 default_server;/a rewrite ^/redirect_me https://portfolio.derawllings.com permanent;' /etc/nginx/sites-available/default
+server {
+    listen 80 default_server;
+    listen [::]:80 default_server;
+    root /var/www/html;
+    index index.html index.htm;
+    server_name _;
+    location /redirect_me {
+        return 301 /redirect.html;
+    }
+}
+EOT
 
 sudo service nginx restart
 sudo service nginx status
